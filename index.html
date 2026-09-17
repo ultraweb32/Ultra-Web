@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UltraWeb | Professional Websites for Businesses</title>
+<meta name="description" content="UltraWeb creates modern, professional websites for businesses.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#fff;
+  background:#07070d;
+  overflow-x:hidden;
+}
+body:before,body:after{
+  content:"";position:fixed;width:500px;height:500px;border-radius:50%;
+  filter:blur(100px);opacity:.22;z-index:-2;
+  animation:float 10s ease-in-out infinite alternate;
+}
+body:before{background:#7c3cff;top:-180px;left:-160px}
+body:after{background:#00d9ff;right:-180px;bottom:-180px;animation-delay:-4s}
+@keyframes float{to{transform:translate(80px,60px) scale(1.15)}}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:20;
+  background:rgba(7,7,13,.72);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
+.logo span{color:#8b5cf6}
+.nav-links{display:flex;gap:28px;color:#bbb;font-size:14px}
+.nav-links a:hover{color:#fff}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 21px;border-radius:12px;font-weight:800;
+  background:linear-gradient(135deg,#8b5cf6,#06b6d4);
+  box-shadow:0 10px 30px rgba(96,70,220,.28);
+  transition:.25s transform,.25s box-shadow
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(96,70,220,.4)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.18);box-shadow:none}
+.hero{padding:170px 0 110px;text-align:center}
+.badge{
+  display:inline-block;padding:8px 13px;border:1px solid rgba(139,92,246,.35);
+  background:rgba(139,92,246,.1);border-radius:999px;color:#c4b5fd;
+  font-size:13px;margin-bottom:25px
+}
+.hero h1{font-size:clamp(48px,8vw,86px);line-height:.98;letter-spacing:-5px;max-width:900px;margin:auto}
+.gradient{background:linear-gradient(90deg,#fff,#a78bfa,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:27px auto;color:#a6a6b4;font-size:18px;line-height:1.7}
+.actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+section{padding:95px 0}
+.section-title{text-align:center;font-size:40px;letter-spacing:-2px;margin-bottom:12px}
+.section-sub{text-align:center;color:#999;max-width:650px;margin:0 auto 50px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  border-radius:22px;padding:30px;transition:.3s;backdrop-filter:blur(10px)
+}
+.card:hover{transform:translateY(-7px);border-color:rgba(139,92,246,.45)}
+.card h3{font-size:21px;margin-bottom:12px}
+.card p{color:#999;line-height:1.65}
+.icon{font-size:30px;margin-bottom:20px}
+.pricing{align-items:stretch}
+.price-card{position:relative}
+.price-card.featured{border-color:#8b5cf6;box-shadow:0 0 45px rgba(124,58,237,.15)}
+.popular{
+  position:absolute;right:20px;top:20px;background:#8b5cf6;
+  padding:6px 10px;border-radius:99px;font-size:11px;font-weight:900
+}
+.price{font-size:48px;font-weight:900;margin:18px 0 8px}
+.price small{font-size:15px;color:#888;font-weight:500}
+.features{list-style:none;margin:25px 0}
+.features li{padding:9px 0;color:#bbb}
+.features li:before{content:"✓";color:#67e8f9;font-weight:900;margin-right:9px}
+.full{width:100%}
+.process .card{min-height:190px}
+.step{color:#8b5cf6;font-size:13px;font-weight:900;margin-bottom:14px}
+.cta{
+  text-align:center;padding:75px 25px;border-radius:28px;
+  background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(6,182,212,.1));
+  border:1px solid rgba(255,255,255,.1)
+}
+.cta h2{font-size:42px;letter-spacing:-2px;margin-bottom:15px}
+.cta p{color:#aaa;margin-bottom:25px}
+.support{
+  display:flex;align-items:center;justify-content:space-between;gap:25px;
+  padding:28px;border-radius:20px;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08)
+}
+.support p{color:#999;margin-top:7px}
+.support-email{color:#8eeaff;font-weight:700}
+footer{padding:45px 0;border-top:1px solid rgba(255,255,255,.08);color:#888}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:#fff}
+@media(max-width:800px){
+ .nav-links{display:none}
+ .grid{grid-template-columns:1fr}
+ .hero{padding-top:140px}
+ .hero h1{letter-spacing:-3px}
+ .support{flex-direction:column;align-items:flex-start}
+ .cta h2{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#">Ultra<span>Web</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">How It Works</a>
+      <a href="#support">Support</a>
+    </div>
+    <a class="btn" href="#pricing">Get Started</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="badge">Professional Websites • Built for Business</div>
+    <h1>Turn your business into a <span class="gradient">professional website.</span></h1>
+    <p>UltraWeb creates modern, responsive websites that help businesses look professional, build trust, and get more customers.</p>
+    <div class="actions">
+      <a class="btn" href="#pricing">View Packages</a>
+      <a class="btn btn-outline" href="#support">Contact Support</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">What UltraWeb Does</h2>
+    <p class="section-sub">Everything you need to give your business a strong online presence.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">🌐</div><h3>Modern Websites</h3><p>Clean, professional websites designed to make your business stand out.</p></div>
+      <div class="card"><div class="icon">📱</div><h3>Mobile Friendly</h3><p>Your website will look great on phones, tablets, laptops, and desktops.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Fast & Smooth</h3><p>Modern layouts, animations, and optimized code for a smooth experience.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title">Simple Pricing</h2>
+    <p class="section-sub">Choose the package that fits your business. No complicated pricing.</p>
+    <div class="grid pricing">
+      <div class="card price-card">
+        <h3>Starter Website</h3>
+        <div class="price">$150 <small>one-time</small></div>
+        <p>A professional website for businesses that need a simple online presence.</p>
+        <ul class="features">
+          <li>Professional design</li>
+          <li>Mobile responsive</li>
+          <li>Up to 3 main pages</li>
+          <li>Contact section</li>
+          <li>Basic animations</li>
+        </ul>
+        <a class="btn full" href="https://buy.stripe.com/dRmfZh4b42cDbSt2mC7Vm02">Choose $150 Package</a>
+      </div>
+
+      <div class="card price-card featured">
+        <div class="popular">MOST POPULAR</div>
+        <h3>Business Website</h3>
+        <div class="price">$300 <small>one-time</small></div>
+        <p>A more complete website designed for businesses ready to stand out online.</p>
+        <ul class="features">
+          <li>Premium custom design</li>
+          <li>Mobile responsive</li>
+          <li>Up to 6 main pages</li>
+          <li>Advanced animations</li>
+          <li>Services & pricing sections</li>
+          <li>Contact & social links</li>
+        </ul>
+        <a class="btn full" href="https://buy.stripe.com/cNi8wPfTM9F55u54uK7Vm03">Choose $300 Package</a>
+      </div>
+
+      <div class="card price-card">
+        <h3>Custom Project</h3>
+        <div class="price">Let's Talk</div>
+        <p>Need something beyond the standard packages? Contact UltraWeb for a custom project.</p>
+        <ul class="features">
+          <li>Custom features</li>
+          <li>Custom page layouts</li>
+          <li>Special integrations</li>
+          <li>Custom design requests</li>
+        </ul>
+        <a class="btn btn-outline full" href="mailto:ultraweb57@gmail.com?subject=UltraWeb%20Custom%20Website%20Project">Contact UltraWeb</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Getting your business online is simple.</p>
+    <div class="grid">
+      <div class="card"><div class="step">01 — CHOOSE</div><h3>Pick a Package</h3><p>Choose the $150 Starter package or the $300 Business package.</p></div>
+      <div class="card"><div class="step">02 — TELL US</div><h3>Send Your Information</h3><p>Provide your business details, photos, logo, colors, and website preferences.</p></div>
+      <div class="card"><div class="step">03 — BUILD</div><h3>We Build Your Site</h3><p>UltraWeb turns your information into a professional website for your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <div class="container">
+    <div class="support">
+      <div>
+        <h2>Need help?</h2>
+        <p>Questions about your website, package, or project?</p>
+        <div class="support-email">ultraweb57@gmail.com</div>
+      </div>
+      <a class="btn" href="mailto:ultraweb57@gmail.com?subject=UltraWeb%20Support">Email Support</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to build your website?</h2>
+      <p>Give your business the professional online presence it deserves.</p>
+      <a class="btn" href="#pricing">Get Started with UltraWeb</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>UltraWeb</strong> — Professional websites for businesses.</div>
+    <div><a href="mailto:ultraweb57@gmail.com">ultraweb57@gmail.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
